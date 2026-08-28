@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DEV@Deakin - Personal Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+     
+      color:teal;
+    }
+
+    /* 1. Navigation Bar */
+    nav {
+      text-align: left;
+      padding: 15px;
+    }
+
+    nav a {
+      margin-right: 20px;
+      color:teal;
+      
+      font-weight: bold;
+    }
+
+    /* Banner and Hover Text */
+    .banner {
+      position: relative;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .banner-text {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px 0;
+    }
+
+    .banner:hover .banner-text {
+      display: block;
+    }
+
+    /* 2. Author Profile */
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    hr {
+      width: 150px;
+      border: 1px solid teal;
+    }
+
+    /* 3. Portfolio */
+    .project {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px auto;
+    }
+
+    .project img {
+      width: 120px;
+      height: 80px;
+    }
+
+    .project div {
+      text-align: left;
+    }
+
+    /* 4. Responsive Gallery */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 130px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Navigation Bar -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Banner -->
+  <div class="banner">
+    <img src="https://img.magnific.com/free-photo/big-city-park-melbourne_1150-12664.jpg?semt=ais_hybrid&w=740&q=80">
+    <div class="banner-text">Hey, I'm Ishika Sharma</div>
+  </div>
+
+  <!-- 2. Author Profile -->
+  <div id="about">
+    <img class="profile-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzy1Szf8q1hISJYUlSikVTC7xfi-P8wOSCU0KStD1CCQ&s=10">
+    <p>I am an aspiring software engineer dedicated to writing clean code and solving real-world problems. </p>
+    <hr>
+    <p>Here's what I've done so far</p>
+  </div>
+
+  <!-- 3. Portfolio -->
+  <div id="work">
+    <div class="project">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBUhPa84pLqGIjbv2eC97vkShs2dm4tehqt0hvjLEGsg&s=10">
+      <div>
+        <b>Project 1: SIT210</b>
+        <p>This project has two distinct embedded systems projects: an Automated Smart Light System to automatically turn on a light, and a Temperature & Humidity Monitor that utilizes a DHT22 sensor to accurately measure and track real-time climate data.</p>
+        <a href="https://github.com/ishikas0727-hue/SIT210">GitHub Link</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpS0fSuEh0iow5TG_Umgt3WFJ54JspEQHI0eCqPmkMng&s=10">
+      <div>
+        <b>Project 2: HTML</b>
+        <p>This is my beginner-friendly HTML code that builds a clean webpage. This is very helpful for learning from basics and is easy to grasp. Practice of this will be very helpful in future.</p>
+        <a href="https://github.com/ishikas0727-hue/firstproject">GitHub Link</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Responsive Gallery -->
+  <div id="contact">
+    <hr>
+    <p>My photos</p>
+    <div class="gallery">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs-eNmm-s-UrHi9zMJpsDCoD9Wi5wjRjJrciV2Q_2gtg&s">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSociOUxwusxxIiNquT5FNKTzg_65jh5qHaLwIR3ro7dg&s=10">
+      <img src="https://i.pinimg.com/736x/69/d1/63/69d163fdaa20ac21abe9424aaac16f34.jpg">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcaU_cC84mDtnUMvgkdWC5j3JLCltDCN1eJ8qv7hQAPg&s=10">
+    </div>
+  </div>
+<!-- Newsletter Subscription -->
+<div id="subscribe">
+  <hr>
+  <h2>Subscribe to DEV@Deakin</h2>
+  <p>Enter your email to receive a welcome email.</p>
+
+  <form id="subscribeForm">
+    <input 
+      type="email" 
+      id="email" 
+      placeholder="Enter your email"
+      required
+    >
+
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <p id="message"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
